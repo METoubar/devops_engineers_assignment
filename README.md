@@ -25,26 +25,29 @@ usermod -aG docker dockeradmin
 ```
 
 4. Install Ansible
-Add a EPEL (Extra Packages for Enterprise Linux)third party repository to get packages for Ansible 
-```sh 
-rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-```
+  Add a EPEL (Extra Packages for Enterprise Linux)third party repository to get packages for Ansible 
+  ```sh 
+  rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  ```
 
-Install Ansible
-```sh 
-yum install ansible -y 
-```
+  Install Ansible
+  ```sh 
+  yum install ansible -y 
+  ```
 
-Check Ansible version 
+  Check Ansible version 
 
-```sh 
-ansible --version
-```
+  ```sh 
+  ansible --version
+  ```
 
-Create a new user for ansible administration & grant admin access to user (Master and Slave)
-```sh 
-useradd ansadmin
-passwd ansadmin
-# below command addes ansadmin to sudoers file. But strongly recommended to use "visudo" command if you are aware vi or nano editor. 
-echo "ansadmin ALL=(ALL) ALL" >> /etc/sudoers
-```
+  Create a new user for ansible administration & grant admin access to user (Master and Slave)
+  ```sh 
+  useradd ansadmin
+  passwd ansadmin
+  # below command addes ansadmin to sudoers file. But strongly recommended to use "visudo" command if you are aware vi or nano editor. 
+  echo "ansadmin ALL=(ALL) ALL" >> /etc/sudoers
+  ```
+
+5. Launch EC2 for Jenkins and login to jenkins server
+
