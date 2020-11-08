@@ -30,18 +30,18 @@ usermod -aG docker dockeradmin
   rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
   ```
 
-  Install Ansible
+  - Install Ansible
   ```sh 
   yum install ansible -y 
   ```
 
-  Check Ansible version 
+  - Check Ansible version 
 
   ```sh 
   ansible --version
   ```
 
-  Create a new user for ansible administration & grant admin access to user (Master and Slave)
+  - Create a new user for ansible administration & grant admin access to user (Master and Slave)
   ```sh 
   useradd ansadmin
   passwd ansadmin
@@ -50,4 +50,7 @@ usermod -aG docker dockeradmin
   ```
 
 5. Launch EC2 for Jenkins and login to jenkins server
-
+6. configure the eks cluster as a jenkins node
+7. generate ssh key on the cluster and copy the private key and set it to jenkins credential
+- In the Jenkins folder there is a small django application with its jenkinsfile and dockerfile ready to run
+8. create a new Jenkins pipeline and give it the git repo and path of the jenkinsfile then run.
