@@ -6,8 +6,8 @@ go to eks-getting started
 in that directory you can find all terraform scripts need provider.tf, output.tf, eks.tf
 run the following commands
 
-> terraform init
+> $ terraform init
 
-> terraform apply
+> $ terraform apply
 
 then type yes
